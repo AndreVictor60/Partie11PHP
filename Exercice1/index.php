@@ -16,6 +16,7 @@
                 <input type="submit" name="soustraction" value="-"/>
                 <input type="submit" name="multiplication" value="*"/>
                 <input type="submit" name="division" value="/"/>
+                <input type="submit" name="reset" value="Remise a zéro"/>
             </form>
             <p>Résultat :
                 <?php
@@ -72,6 +73,9 @@
                             echo 'Veuillez saisir un chiffré';
                         }
                     }
+                }
+                if (isset($_POST['reset'])) {
+                    unset($_POST);
                 }
                 ?>
             </p>
